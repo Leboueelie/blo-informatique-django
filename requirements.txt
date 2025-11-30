@@ -1,2 +1,8 @@
-Django==5.2.8
-pillow==10.4.0
+Django==5.1.3
+Pillow==10.4.0                  # pour ImageField (images articles + avatars)
+psycopg2-binary==2.9.9          # PostgreSQL (obligatoire sur Render, fonctionne aussi avec SQLite en local)
+gunicorn==23.0.0                # serveur pour Render/Docker prod
+whitenoise==6.7.0               # gestion des static/media en prod sans config
+python-decouple==3.8            # .env propre (SECRET_KEY, DEBUG, etc.)
+django-allauth==65.0.2          # inscription + login + profil (le meilleur choix en 2025)
+django-mptt==0.16.0             # commentaires imbriqués (replies) sans prise de tête
